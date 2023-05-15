@@ -31,7 +31,7 @@ function CrearCita(){
   <div className="CrearCita">
     <h2>Crear mi Cita</h2>
         <form>
-          <label>Nombre de la mascota</label>
+          <label>Nombre Mascota</label>
           <input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota" value=""></input>
           <label>Nombre Dueño</label><input type="text" name="propietario" class="u-full-width" placeholder="Nombre dueño de la mascota" value=""></input>
           <label>Fecha</label><input type="date" name="fecha" class="u-full-width" value=""></input>
@@ -46,7 +46,7 @@ function CrearCita(){
 function AdministrarCitas(){
   return (
     <div className='AdministrarCitas'>
-      <h2>Administrar tus citas</h2>
+      <h2>Administra tus citas</h2>
       <div class="cita">
               <p>Mascota: <span>Blacky</span></p>
               <p>Dueño: <span>Jere</span></p>
