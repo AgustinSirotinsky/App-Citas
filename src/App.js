@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css';
 import Citas from './components/Citas';
 
@@ -31,14 +32,14 @@ function CrearCita(){
   return (
   <div className="CrearCita">
     <h2>Crear mi Cita</h2>
-        <form>
-          <label>Nombre Mascota</label><input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota" value=""></input>
-          <label>Nombre Dueño</label><input type="text" name="propietario" class="u-full-width" placeholder="Nombre dueño de la mascota" value=""></input>
-          <label>Fecha</label><input type="date" name="fecha" class="u-full-width" value=""></input>
-          <label>hora</label><input type="time" name="hora" class="u-full-width" value=""></input>
-          <label>Sintomas</label><textarea name="sintomas" class="u-full-width"></textarea>
-          <button type="submit" class="u-full-width button-primary">Agregar Cita</button>
-        </form> 
+        <div>
+          <label>Nombre Mascota</label><input type="text" name="mascota" class="u-full-width" placeholder="Nombre Mascota" id="mascota"></input>
+          <label>Nombre Dueño</label><input type="text" name="propietario" class="u-full-width" placeholder="Nombre dueño de la mascota" id="dueno"></input>
+          <label>Fecha</label><input type="date" name="fecha" class="u-full-width" id="fecha"></input>
+          <label>hora</label><input type="time" name="hora" class="u-full-width" id="hora"></input>
+          <label>Sintomas</label><textarea name="sintomas" class="u-full-width" id="sintomas"></textarea>
+          <button type="button" class="u-full-width button-primary" onClick={IngresarCita()}>Agregar Cita</button>
+        </div> 
   </div>
   )
 }
@@ -54,4 +55,16 @@ function AdministrarCitas(){
   )
 }
 
+function IngresarCita(){
+  const [count, setCount] = useState(0);
+  let mascota= document.getElementById("mascota").value;
+  let duenio= document.getElementById("dueno").value;
+  let fecha= document.getElementById("fecha").value;
+  let hora1= document.getElementById("hora").value;
+  let sintomas1= document.getElementById("sintomas").value;
+
+  <Citas nombre={mascota} dueno={duenio} fecha={fecha} hora={hora1} sintomas={sintomas}/>
+}
+
 export default App;
+
