@@ -1,6 +1,7 @@
 import React,{Fragment} from "react";
+import './components.css';
 
-function Ingresos(paciente){
+function Citas(paciente){
     return (
       <Fragment>
         <div className="cita">
@@ -15,4 +16,4 @@ function Ingresos(paciente){
     );
   }
   
-  export default Ingresos;
+export default Citas;
